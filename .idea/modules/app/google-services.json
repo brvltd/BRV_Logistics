@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "274818907428",
+    "firebase_url": "https://brvlogistics-4fb7a.firebaseio.com",
+    "project_id": "brvlogistics-4fb7a",
+    "storage_bucket": "brvlogistics-4fb7a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274818907428:android:7e9af5ea68384b8502c7b1",
+        "android_client_info": {
+          "package_name": "org.brv.brv_logistics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "274818907428-shgn2ik864u3e3p8jvu76f432uej56t5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.brv.brv_logistics",
+            "certificate_hash": "4fcba7e3d1481faa4edb2f3eeb3d121adf2e9c41"
+          }
+        },
+        {
+          "client_id": "274818907428-joro0hoogjfpof8crgb5qjipdlnvd028.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHFjpEXFMmgnssAPkuV0pWIa_zqmCoXY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "274818907428-joro0hoogjfpof8crgb5qjipdlnvd028.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
