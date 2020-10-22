@@ -4,7 +4,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/Bismark</item>
         <item name="colorPrimaryDark">@color/Bismark</item>
-        <item name="colorAccent">#FFFFFF</item>
+        <item name="colorAccent">#000</item>
     </style>
 
 </resources>

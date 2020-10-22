@@ -50,6 +50,7 @@ public class Login extends AppCompatActivity implements NewUserDialog.BRVDialogL
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.login);
         ButterKnife.bind(this);
+
         newUser();
         login();
 
@@ -137,7 +138,7 @@ public class Login extends AppCompatActivity implements NewUserDialog.BRVDialogL
                     } else {
                         mAuthProgressDialog.dismiss();
                         new SweetAlertDialog(Login.this, SweetAlertDialog.ERROR_TYPE)
-                                .setTitleText("Wrong Email")
+                                .setTitleText("Wrong Phone")
                                 .show();
                     }
                 }
