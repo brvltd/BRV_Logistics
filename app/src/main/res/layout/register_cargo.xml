@@ -1,45 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/Bismark"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/CustId"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@color/Bismark"
+        app:cardCornerRadius="75dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bv" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_input"
-        android:hint="Customer Id"
-        android:padding="10dp"
-        android:paddingStart="40dp"
+        android:text="Details"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="25sp"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
+       />
 
-    <EditText
-        android:id="@+id/CustName"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/names"
+        android:layout_below="@id/txtHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_input"
-        android:hint="Customer Name"
-        android:padding="10dp"
-        android:paddingStart="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
+        android:layout_marginTop="30dp">
 
-    <EditText
-        android:id="@+id/cargoName"
+
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_input"
+            android:drawableLeft="@drawable/ic_baseline_person_add_24"
+            android:hint="  First Name"
+            android:padding="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/lastName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/lastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_input"
+            android:drawableLeft="@drawable/ic_baseline_person_add_24"
+            android:hint="  Last Name"
+            android:padding="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/firstName"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_input"
-        android:hint="Cargo Name"
-        android:padding="10dp"
-        android:paddingStart="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
+        android:layout_below="@id/names"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        >
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_input"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:hint="  Email"
+            android:padding="10dp"
+            android:paddingStart="10dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toTopOf="@id/phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_input"
+            android:drawableLeft="@drawable/ic_baseline_contact_phone_24"
+            android:hint="  Contact"
+            android:padding="10dp"
+            android:paddingStart="10dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/cargo"
+            />
+
+        <EditText
+            android:id="@+id/cargo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_input"
+            android:drawableLeft="@drawable/ic_baseline_details_24"
+            android:hint="  Cargo Details"
+            android:padding="10dp"
+            android:paddingStart="10dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/from"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/from"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_input"
+            android:drawableLeft="@drawable/ic_baseline_my_location_24"
+            android:iconifiedByDefault="false"
+
+            android:paddingStart="10dp"
+            android:queryHint="From"
+            app:layout_constraintBottom_toTopOf="@id/to"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cargo" />
+
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_input"
+            android:drawableLeft="@drawable/ic_baseline_location_on_24"
+            android:iconifiedByDefault="true"
+            android:paddingStart="10dp"
+            android:queryHint="To"
+            app:layout_constraintTop_toBottomOf="@id/from"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Submit"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:background="@drawable/round_button"
+            app:layout_constraintBottom_toTopOf="@+id/progress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <com.trncic.library.DottedProgressBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:padding="30dp"
+            app:activeDot="@drawable/active_dot"
+            app:dotSize="29dp"
+            app:inactiveDot="@drawable/inactive_dot"
+            app:jumpingSpeed="670"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/go"
+            app:spacing="15dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

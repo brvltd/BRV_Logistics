@@ -21,7 +21,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import org.brv.brv_logistics.R;
 
-import cn.pedant.SweetAlert.SweetAlertDialog;
 
 import static org.brv.brv_logistics.Constants.Constants.DEFAULT_ZOOM;
 

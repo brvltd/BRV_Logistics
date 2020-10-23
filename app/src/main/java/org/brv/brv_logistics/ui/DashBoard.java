@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -39,8 +40,10 @@ public class DashBoard extends AppCompatActivity {
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
 
-        tabLayout.getTabAt(0).setIcon(R.drawable.ic_baseline_add_24);
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_baseline_create_24);
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_baseline_shopping_cart_24);
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_baseline_map_24);
     }
+
+
 }
