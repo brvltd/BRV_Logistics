@@ -2,4 +2,5 @@
     <string name="app_name">BRV Logistics</string>
     <string name="search_title">Search</string>
     <string name="search_hint">Search Here</string>
+    <string name="map_key">AIzaSyBEVzeIXwtM3yo9oOSvGUgnBIhnKgTnHa8</string>
 </resources>

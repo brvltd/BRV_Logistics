@@ -130,37 +130,33 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@id/from"/>
 
-        <androidx.appcompat.widget.SearchView
+
+        <fragment
             android:id="@+id/from"
+            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@drawable/rounded_input"
-            android:drawableLeft="@drawable/ic_baseline_my_location_24"
-            android:iconifiedByDefault="false"
-
-            android:paddingStart="10dp"
-            android:queryHint="From"
             app:layout_constraintBottom_toTopOf="@id/to"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cargo" />
 
-
-        <androidx.appcompat.widget.SearchView
+        <fragment
             android:id="@+id/to"
+            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@drawable/rounded_input"
-            android:drawableLeft="@drawable/ic_baseline_location_on_24"
-            android:iconifiedByDefault="true"
-            android:paddingStart="10dp"
-            android:queryHint="To"
             app:layout_constraintTop_toBottomOf="@id/from"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
